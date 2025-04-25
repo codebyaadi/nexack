@@ -11,10 +11,10 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@workspace/ui/components",
-    "utils": "@workspace/ui/lib/utils",
-    "hooks": "@workspace/ui/hooks",
-    "lib": "@workspace/ui/lib",
-    "ui": "@workspace/ui/components"
+    "components": "@nexack/ui/components",
+    "utils": "@nexack/ui/lib/utils",
+    "hooks": "@nexack/ui/hooks",
+    "lib": "@nexack/ui/lib",
+    "ui": "@nexack/ui/components"
   }
 }
