@@ -1,0 +1,13 @@
+{
+  "name": "@nexack/prettier-config",
+  "version": "0.0.0",
+  "license": "PROPRIETARY",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "prettier-plugin-tailwindcss": "^0.6.11"
+  }
+}
