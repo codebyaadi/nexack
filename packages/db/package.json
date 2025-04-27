@@ -1,0 +1,26 @@
+{
+  "name": "@nexack/db",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "db:generate": "bunx drizzle-kit generate",
+    "db:migrate": "bunx drizzle-kit migrate",
+    "db:push": "bunx drizzle-kit push"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.43.1",
+    "pg": "^8.15.6"
+  },
+  "devDependencies": {
+    "@nexack/eslint-config": "workspace:*",
+    "@nexack/typescript-config": "workspace:*",
+    "@types/pg": "^8.11.14",
+    "drizzle-kit": "^0.31.0",
+    "typescript": "^5.7.3"
+  },
+  "exports": {
+    ".": "./index.ts",
+    "./schema": "./schema/*.ts"
+  }
+}

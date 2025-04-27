@@ -1,0 +1,10 @@
+{
+  "extends": "@nexack/typescript-config/node",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@nexack/db/*": ["./*"]
+    }
+  },
+  "include": ["."]
+}
