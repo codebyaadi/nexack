@@ -2,7 +2,7 @@
   "name": "nexack-api",
   "type": "module",
   "scripts": {
-    "dev": "bun run src/index.ts",
+    "dev": "bun run --watch src src/index.ts",
     "build": "tsup",
     "start": "bun dist/index.js",
     "check-types": "tsc --noEmit"
@@ -10,13 +10,17 @@
   "private": true,
   "devDependencies": {
     "@types/bun": "latest",
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
+    "@types/morgan": "^1.9.9",
     "tsup": "^8.4.0"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "express": "^5.1.0"
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0"
   }
 }

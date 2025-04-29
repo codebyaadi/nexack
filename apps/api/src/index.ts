@@ -1,14 +1,23 @@
-import express, {
-  type Request,
-  type Response,
-  type NextFunction,
-  type Express,
-} from "express";
+import { auth } from "@nexack/auth/server.ts";
+import { toNodeHandler } from "better-auth/node";
+import cors from "cors";
+import express, { Express, NextFunction, Request, Response } from "express";
+import morgan from "morgan";
+
 const app: Express = express();
 
-app.use(express.json());
-
 const port = process.env.PORT || 8080;
+
+app.use(morgan("dev"));
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  }),
+);
+app.all("/api/auth/*splat", toNodeHandler(auth));
+app.use(express.json());
 
 app.get(
   "/",
