@@ -20,7 +20,7 @@
     "typescript": "^5.7.3"
   },
   "exports": {
-    ".": "./index.ts",
-    "./schema": "./schema/*.ts"
+    ".": "./src/index.ts",
+    "./schema/*": "./src/schema/*.ts"
   }
 }
