@@ -1,0 +1,23 @@
+{
+  "name": "@nexack/auth",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "auth:generate": "bunx @better-auth/cli generate --config src/server.ts --output ../db/src/schema/auth.ts",
+    "auth:migrate": "bunx @better-auth/cli@latest migrate --config src/server.ts"
+  },
+  "devDependencies": {
+    "@nexack/eslint-config": "workspace:*",
+    "@nexack/typescript-config": "workspace:*",
+    "@nexack/db": "workspace:*",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "better-auth": "^1.2.7"
+  },
+  "exports": {
+    "./client.ts": "./src/client.ts",
+    "./server.ts": "./src/server.ts"
+  }
+}
